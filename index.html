@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://dl.dropbox.com/s/yrr7z4avnas4a6c/asteroid-alert-min.js"></script>
+</head>
+<body>
+
+<button id="myconfirm">Confirm</button>
+
+<script type="text/javascript">
+
+    var myconfirm = document.getElementById("myconfirm")
+    myconfirm.addEventListener("click", function(){
+        $confirm("Do you want to delete?", "#E74C3C")
+        .then(() => {
+            $toast("Deleted", "#E74C3C");
+        })
+    })
+
+</script>
+</body>
+</html>
