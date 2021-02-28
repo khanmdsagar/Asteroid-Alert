@@ -4,20 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://dl.dropbox.com/s/yrr7z4avnas4a6c/asteroid-alert-min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://dl.dropbox.com/s/yrr7z4avnas4a6c/asteroid-alert-min.js"></script> -->
 </head>
 <body>
+<div class="basic-nav">
+    <div class="basic-navbody">
+        <img width="35px" height="35px" src="impact.svg">
+        <p class="lebel m-left10">Asteroid alert</p>
+    </div>
+</div>
 
-<button id="myconfirm">Confirm</button>
+<div class="appWrapper">
+    <div class="app">
+        <img width="200px" height="200px" src="meteor.svg">
+        <div class="init">An alternative of JavaScript alert</div>
+    </div>
 
+    <div class="cdn">
+        <input id="cdnInput" type="text" value="https://dl.dropbox.com/s/yrr7z4avnas4a6c/asteroid-alert-min.js">
+    </div>
+
+    <div class="preview">
+        <p>Preview</p>
+        <div class="previewButton">
+            <button id="myalert">alert</button>
+            <button id="myconfirm">confirm</button>
+            <button id="mytoast">toast</button>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Creator: <a href="https://khanmdsagar.net" target="_blank">Khan MD Sagar</a></p>
+        <p style="margin-top: 10px;">Copyright 2020</p>
+    </div>
+</div>
+
+<script src="asteroid-alert.js"></script>
 <script type="text/javascript">
 
+    var myalert = document.getElementById("myalert")
     var myconfirm = document.getElementById("myconfirm")
+    var mytoast = document.getElementById("mytoast")
+
+    myalert.addEventListener("click", function(){
+        $alert("Do you want to delete?", "#FF9100")
+    })
+
     myconfirm.addEventListener("click", function(){
-        $confirm("Do you want to delete?", "#E74C3C")
+        $confirm("Do you want to delete?", "#FF9100")
         .then(() => {
-            $toast("Deleted", "#E74C3C");
+            $toast("Deleted", "#FF9100");
         })
+    })
+
+    mytoast.addEventListener("click", function(){
+        $toast("No internet connection", "#FF9100")
     })
 
 </script>
