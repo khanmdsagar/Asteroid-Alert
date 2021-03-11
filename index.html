@@ -16,9 +16,9 @@
 </div>
 
 <div class="appWrapper">
+    
     <div class="app">
-        <img width="200px" height="200px" src="meteor.svg">
-        <div class="init">Simple and beautiful alert library for web</div>
+        <div class="init">Simple and Beautiful Alert Library for Web</div>
     </div>
 
     <div class="cdn">
@@ -43,7 +43,8 @@
 
     <div class="copyright">
         <p>Creator: <a href="https://khanmdsagar.net" target="_blank">Khan MD Sagar</a></p>
-        <p style="margin-top: 10px;">Copyright 2020</p>
+        <p>Github: <a href="https://github.com/khanmdsagar/Asteroid-Alert" target="_blank">Asteroid alert</a></p>
+        <p style="margin-top: 10px;">Copyright <span id="cYear"></span></p>
     </div>
 </div>
 
@@ -54,6 +55,10 @@
     var myconfirm = document.getElementById("myconfirm")
     var mytoast = document.getElementById("mytoast")
     var myloader = document.getElementById("myloader")
+    var cYear = document.getElementById("cYear")
+
+    var d = new Date()
+    cYear.innerText = d.getFullYear()
 
     myalert.addEventListener("click", function(){
         $alert("Do you want to delete?", "#FF9100")
