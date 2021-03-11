@@ -300,3 +300,171 @@ function $alert(text, buttonColor){
         as_background.remove();
     });  
 };
+
+
+//loader
+function $loader_show(iColor){
+    var as_background = document.createElement('div');
+    as_background.classList.add("as-background");
+    as_background.setAttribute("id","as-background");
+
+    var as_loaderBox = document.createElement('div');
+    as_loaderBox.classList.add("loaderBox");
+
+    var as_iconDiv = document.createElement('div');
+    as_iconDiv.classList.add("iconDiv");
+
+    as_iconDiv.innerHTML = `
+    <svg fill="#B4B4B4" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 28.551 28.551" style="enable-background:new 0 0 28.551 28.551;" xml:space="preserve">
+    <g>
+        <path d="M12.768,3.674v-2.17C12.768,0.676,13.443,0,14.273,0l0,0c0.83,0,1.505,0.676,1.505,1.504l0,0v2.17
+            c0,0.83-0.675,1.508-1.505,1.508l0,0C13.443,5.182,12.768,4.504,12.768,3.674L12.768,3.674z"/>
+        <path d="M12.768,27.041v-2.168c0-0.828,0.675-1.506,1.505-1.506l0,0c0.83,0,1.505,0.678,1.505,1.506l0,0v2.168
+            c0,0.832-0.675,1.51-1.505,1.51l0,0C13.443,28.551,12.768,27.873,12.768,27.041L12.768,27.041z"/>
+        <path d="M20.704,7.844c-0.585-0.588-0.585-1.545,0-2.129l0,0l1.534-1.533c0.589-0.59,1.542-0.59,2.13,0l0,0
+            c0.59,0.59,0.59,1.539,0,2.125l0,0l-1.534,1.537c-0.294,0.291-0.68,0.439-1.064,0.439l0,0C21.384,8.283,21,8.135,20.704,7.844
+            L20.704,7.844z"/>
+        <path d="M4.179,24.367c-0.585-0.586-0.585-1.541,0-2.131l0,0l1.535-1.533c0.592-0.586,1.541-0.586,2.131,0l0,0
+            c0.586,0.592,0.586,1.541,0,2.131l0,0l-1.536,1.533c-0.292,0.293-0.68,0.439-1.065,0.439l0,0
+            C4.859,24.807,4.472,24.66,4.179,24.367L4.179,24.367z"/>
+        <path d="M24.875,15.777c-0.832,0-1.506-0.674-1.506-1.504l0,0c0-0.832,0.674-1.506,1.506-1.506l0,0h2.169
+            c0.83,0,1.507,0.678,1.507,1.506l0,0c0,0.83-0.677,1.504-1.507,1.504l0,0H24.875L24.875,15.777z"/>
+        <path d="M1.505,15.777C0.674,15.777,0,15.104,0,14.273l0,0c0-0.832,0.674-1.506,1.505-1.506l0,0h2.169
+            c0.83,0,1.505,0.678,1.505,1.506l0,0c0,0.83-0.675,1.504-1.505,1.504l0,0H1.505L1.505,15.777z"/>
+        <path d="M22.238,24.367l-1.534-1.537c-0.585-0.586-0.585-1.535,0.003-2.127l0,0c0.587-0.586,1.539-0.586,2.127,0l0,0l1.534,1.533
+            c0.586,0.59,0.586,1.545,0,2.131l0,0c-0.296,0.293-0.681,0.439-1.065,0.439l0,0C22.919,24.807,22.533,24.66,22.238,24.367
+            L22.238,24.367z"/>
+        <path d="M5.714,7.844L4.179,6.307c-0.585-0.586-0.585-1.539,0-2.125l0,0c0.589-0.59,1.542-0.59,2.13,0l0,0l1.536,1.533
+            c0.586,0.584,0.586,1.541,0,2.129l0,0C7.549,8.135,7.165,8.283,6.78,8.283l0,0C6.394,8.283,6.009,8.135,5.714,7.844L5.714,7.844z"
+            />
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    </svg>
+
+    `;
+
+    as_iconDiv.style.overflow = "hidden";
+
+    as_loaderBox.appendChild(as_iconDiv);
+    as_background.appendChild(as_loaderBox);
+    document.body.appendChild(as_background);
+
+    var style = document.createElement('style');
+    style.setAttribute("type","text/css");
+    style.setAttribute("id","as-style-loader");
+
+    style.innerHTML =
+    `
+    .as-background{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0; 
+        background-color: rgba(0, 0, 0, 0.6);
+        font-family: 'Heebo', sans-serif;
+        z-index: 100000;  
+    }
+    .loaderBox{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .loaderBox .iconDiv{
+        position: relative;
+        width: 49px;
+        height: 49px;
+        animation: rotate 2s linear infinite;
+    }
+    @keyframes rotate{
+        0%
+        {
+            transform: rotate(0deg);
+        }
+        100%
+        {
+            transform: rotate(360deg);
+        }
+    }
+    .loaderBox .iconDiv svg{
+        fill: ${iColor};
+    }
+    `;
+    document.head.appendChild(style);
+}
+
+//loader hide
+function $loader_hide(){
+    var as_style_loader = document.getElementById("as-style-loader");
+    var as_background = document.getElementById("as-background");
+        as_style_loader.remove();
+        as_background.remove();
+}
