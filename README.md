@@ -5,6 +5,7 @@ It's an alert library build with JavaScript. You can replace your traditional Ja
 ## For npm installation
    npm i asteroid-alert
 ### CDN V1.0.0: https://dl.dropbox.com/s/yrr7z4avnas4a6c/asteroid-alert-min.js
+### Website: https://asteroid-alert.netlify.app/
 
 ### Functions
 <pre>
