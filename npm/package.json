@@ -1,6 +1,6 @@
 {
   "name": "asteroid-alert",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "Simple library for alert, confirm, toast and loader",
   "main": "as-min.js",
   "scripts": {
