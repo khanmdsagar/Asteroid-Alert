@@ -31,6 +31,7 @@
             <button id="myalert">alert</button>
             <button id="myconfirm">confirm</button>
             <button id="mytoast">toast</button>
+            <button id="myloader">loader</button>
         </div>
     </div>
 
@@ -46,10 +47,19 @@
     var myalert = document.getElementById("myalert")
     var myconfirm = document.getElementById("myconfirm")
     var mytoast = document.getElementById("mytoast")
+    var myloader = document.getElementById("myloader")
 
     myalert.addEventListener("click", function(){
         $alert("Do you want to delete?", "#FF9100")
     })
+
+    myloader.addEventListener("click", function(){
+        $loader_show("#FF9100")
+    })
+
+    setTimeout(()=>{
+        $loader_hide()
+    }, 5000)
 
     myconfirm.addEventListener("click", function(){
         $confirm("Do you want to delete?", "#FF9100")
