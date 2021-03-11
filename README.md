@@ -16,7 +16,6 @@ $confirm("Do you want to delete?", "#E74C3C")
 $alert("Successfull", '#E74C3C') 
 $toast("No internet connection", "#F4D03F")
 
-Loading alert in v2
 $loader_show("#FF5733") If you don't provide any color code it will take default color
 $loader_hide()
 
