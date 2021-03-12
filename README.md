@@ -3,6 +3,8 @@ It's an alert library build with JavaScript. You can replace your traditional Ja
 
 ## For npm installation
    npm i asteroid-alert --save
+   import {$alert, $confirm, $toast, $loader_show, $loader_hide} from asteroid-alert
+   
 ### CDN: https://dl.dropbox.com/s/w7qndetugavgxaz/as-min.js
 ### Website: https://asteroid-alert.netlify.app/
 
